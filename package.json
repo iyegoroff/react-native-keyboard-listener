@@ -33,8 +33,5 @@
     "index.d.ts",
     "package.json",
     "README.md"
-  ],
-  "dependencies": {
-    "prop-types": "^15.6.0"
-  }
+  ]
 }
