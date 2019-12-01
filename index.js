@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import PropTypes from 'prop-types';
 import {
 	Keyboard,
 } from 'react-native';
@@ -10,12 +9,7 @@ class KeyboardListener extends Component {
 
 	listeners = []
 
-	static propTypes = Object.keys(events).reduce((prev, event) => ({
-		...prev,
-		...{ [`on${event}`]: PropTypes.func },
-	}), {})
-
-	componentWillMount() {
+	componentDidMount() {
 		events.forEach(event => {
 			const keyProp = `on${event}`;
 			if (this.props[keyProp]) {
